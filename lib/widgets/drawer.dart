@@ -9,7 +9,7 @@ class DrawerScreen extends StatelessWidget {
       child: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
-          children:  [
+          children: [
             const UserAccountsDrawerHeader(
               accountName: Text('BrainBox'),
               accountEmail: Text('brainbox@gmail.com'),
@@ -24,13 +24,16 @@ class DrawerScreen extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.account_circle),
               title: const Text('Profile'),
-              onTap: (){
+              onTap: () {
                 Navigator.pushNamed(context, '/profile');
               },
             ),
-            const ListTile(
-              leading: Icon(Icons.settings),
-              title: Text('Setting'),
+            ListTile(
+              leading: const Icon(Icons.settings),
+              title: const Text('Setting'),
+              onTap: () {
+                Navigator.pushNamed(context, '/login');
+              },
             ),
             const ListTile(
               leading: Icon(Icons.question_answer),
